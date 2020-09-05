@@ -1,0 +1,60 @@
+|toplevel
+fpga_clk_50 => stepmotor:u1.clk
+stepmotor_en => stepmotor:u1.en
+btn_rotation => stepmotor:u1.btn_rotation
+stepmotor_dir => stepmotor:u1.dir
+stepmotor_vel[0] => stepmotor:u1.vel[0]
+stepmotor_vel[1] => stepmotor:u1.vel[1]
+stepmotor_pio[0] << stepmotor:u1.phases[0]
+stepmotor_pio[1] << stepmotor:u1.phases[1]
+stepmotor_pio[2] << stepmotor:u1.phases[2]
+stepmotor_pio[3] << stepmotor:u1.phases[3]
+
+
+|toplevel|stepmotor:u1
+clk => enable.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => state~5.DATAIN
+en => enable.DATAA
+dir => phases.OUTPUTSELECT
+dir => phases.OUTPUTSELECT
+dir => phases.OUTPUTSELECT
+dir => phases.OUTPUTSELECT
+vel[0] => Equal0.IN1
+vel[0] => Equal1.IN0
+vel[0] => Equal2.IN1
+vel[1] => Equal0.IN0
+vel[1] => Equal1.IN1
+vel[1] => Equal2.IN0
+btn_rotation => ~NO_FANOUT~
+phases[0] <= phases.DB_MAX_OUTPUT_PORT_TYPE
+phases[1] <= phases.DB_MAX_OUTPUT_PORT_TYPE
+phases[2] <= phases.DB_MAX_OUTPUT_PORT_TYPE
+phases[3] <= phases.DB_MAX_OUTPUT_PORT_TYPE
+
+
